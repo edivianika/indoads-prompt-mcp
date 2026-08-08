@@ -1,9 +1,50 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import type { ComposeInput, PromptTemplate, SearchInput, SearchResult } from '../types.js';
+import type {
+  ComposeInput,
+  GenerateAdPromptInput,
+  GenerateAdPromptResult,
+  PromptTemplate,
+  SearchInput,
+  SearchResult,
+} from '../types.js';
 
 const dataPath = fileURLToPath(new URL('../data/prompts.json', import.meta.url));
-const prompts = JSON.parse(readFileSync(dataPath, 'utf8')) as PromptTemplate[];
+
+export class PromptEngineError extends Error {
+  constructor(
+    public readonly code: string,
+    message: string,
+  ) {
+    super(message);
+    this.name = 'PromptEngineError';
+  }
+}
+
+let prompts: PromptTemplate[] = [];
+let promptLoadError: string | undefined;
+
+try {
+  const parsed = JSON.parse(readFileSync(dataPath, 'utf8')) as unknown;
+  if (!Array.isArray(parsed)) throw new Error('Prompt database root must be an array.');
+  prompts = parsed as PromptTemplate[];
+} catch (error) {
+  promptLoadError = 'Prompt database is unavailable.';
+  console.error('Failed to load prompt database:', error instanceof Error ? error.message : 'Unknown error');
+}
+
+function assertPromptDatabase() {
+  if (promptLoadError || prompts.length === 0) {
+    throw new PromptEngineError('DATA_UNAVAILABLE', promptLoadError ?? 'Prompt database is empty.');
+  }
+}
+
+export function toPublicPromptError(error: unknown) {
+  if (error instanceof PromptEngineError) {
+    return { code: error.code, error: error.message };
+  }
+  return { code: 'UNEXPECTED_ERROR', error: 'Unexpected prompt engine error.' };
+}
 
 const norm = (v?: string) => (v ?? '').toLowerCase().trim();
 const tokens = (v?: string) =>
@@ -52,9 +93,21 @@ function searchableText(p: PromptTemplate) {
     ...p.platforms,
     ...p.aspectRatios,
     ...p.modelHints,
+    p.sceneDirection,
+    p.composition,
+    p.lighting,
+    p.camera,
+    p.background,
+    p.effects,
+    p.copyZone,
+    ...p.avoid,
   ]
     .join(' ')
     .toLowerCase();
+}
+
+function contextText(input: SearchInput) {
+  return [input.query, input.productDescription, input.keyBenefit, input.targetAudience].filter(Boolean).join(' ');
 }
 
 function scorePrompt(p: PromptTemplate, input: SearchInput): { score: number; reasons: string[] } {
@@ -102,19 +155,20 @@ function scorePrompt(p: PromptTemplate, input: SearchInput): { score: number; re
     reasons.push(`model:${input.model}`);
   }
 
-  const qTokens = tokens(input.query);
+  const qTokens = tokens(contextText(input));
   if (qTokens.length) {
     const hay = searchableText(p);
     const matched = qTokens.filter((t) => hay.includes(t));
     const queryScore = Math.min(10, matched.length * 1.6);
     score += queryScore;
-    if (matched.length) reasons.push(`query:${matched.slice(0, 5).join(',')}`);
+    if (matched.length) reasons.push(`context:${matched.slice(0, 5).join(',')}`);
   }
 
   return { score, reasons };
 }
 
 export function searchPrompts(input: SearchInput = {}): SearchResult[] {
+  assertPromptDatabase();
   const count = Math.max(1, Math.min(input.count ?? 8, 20));
   const ranked = prompts
     .map((p) => {
@@ -154,6 +208,10 @@ export function searchPrompts(input: SearchInput = {}): SearchResult[] {
   return selected.map(toResult);
 }
 
+export function recommendPrompts(input: SearchInput = {}): SearchResult[] {
+  return searchPrompts({ ...input, diversify: input.diversify ?? true });
+}
+
 function toResult(x: { p: PromptTemplate; score: number; reasons: string[] }): SearchResult {
   return {
     id: x.p.id,
@@ -170,10 +228,12 @@ function toResult(x: { p: PromptTemplate; score: number; reasons: string[] }): S
 }
 
 export function getPrompt(id: string): PromptTemplate | undefined {
+  assertPromptDatabase();
   return prompts.find((p) => p.id.toLowerCase() === id.toLowerCase());
 }
 
 export function listTaxonomy() {
+  assertPromptDatabase();
   const unique = (fn: (p: PromptTemplate) => string[]) => [...new Set(prompts.flatMap(fn))].sort();
   return {
     promptCount: prompts.length,
@@ -189,9 +249,10 @@ export function listTaxonomy() {
 
 export function composePrompt(input: ComposeInput) {
   const p = getPrompt(input.promptId);
-  if (!p) throw new Error(`Prompt ID not found: ${input.promptId}`);
+  if (!p) throw new PromptEngineError('PROMPT_NOT_FOUND', `Prompt ID not found: ${input.promptId}`);
 
   const ratio = input.aspectRatio || p.aspectRatios[0] || '4:5';
+  const platform = input.platform || p.platforms[0] || 'social media';
   const referenceLock = input.hasReferenceImage
     ? `REFERENCE PRODUCT FIDELITY: Use the uploaded/reference product as the exact hero object. Preserve packaging shape, proportions, cap/lid, label layout, logo, brand colors and every legible printed element. Do not redesign, rename or hallucinate packaging details.`
     : `PRODUCT FIDELITY: Keep the product physically plausible and commercially believable. Do not invent extra logos, fake certifications or unreadable pseudo-text.`;
@@ -214,7 +275,7 @@ export function composePrompt(input: ComposeInput) {
     `VISUAL EFFECTS: ${p.effects}`,
     `LAYOUT / COPY ZONE: ${p.copyZone}`,
     copyBlock,
-    `FORMAT: ${ratio}. Design for ${p.platforms.join(', ')}. Keep the hero product immediately readable at thumbnail size.`,
+    `FORMAT: ${ratio}. Design specifically for ${platform}. Keep the hero product immediately readable at thumbnail size.`,
     `QUALITY BAR: polished agency-level commercial art direction, coherent shadows and reflections, realistic materials, controlled depth, premium color separation, no generic AI-slop styling.`,
     `AVOID: ${p.avoid.join('; ')}; distorted packaging; duplicate products unless requested; warped logos; random text; clutter; muddy lighting; overprocessed HDR; fake UI elements; watermarks.`,
     input.extraInstructions ? `EXTRA INSTRUCTIONS: ${input.extraInstructions}` : '',
@@ -228,6 +289,89 @@ export function composePrompt(input: ComposeInput) {
     visualConcept: p.visualConcept,
     recommendedModels: p.modelHints,
     aspectRatio: ratio,
+    platform,
     prompt,
+  };
+}
+
+function hasGenerateContext(input: GenerateAdPromptInput) {
+  return [
+    input.query,
+    input.category,
+    input.productType,
+    input.productName,
+    input.brandName,
+    input.productDescription,
+    input.keyBenefit,
+    input.targetAudience,
+    input.objective,
+    input.style,
+  ].some((value) => Boolean(value?.trim()));
+}
+
+export function generateAdPrompt(input: GenerateAdPromptInput = {}): GenerateAdPromptResult {
+  if (!hasGenerateContext(input)) {
+    throw new PromptEngineError(
+      'INVALID_INPUT',
+      'Provide at least one product or advertising detail such as productName, productDescription, productType, category, query, objective, or style.',
+    );
+  }
+
+  const [best] = recommendPrompts({
+    query: input.query,
+    category: input.category,
+    productType: input.productType,
+    productDescription: input.productDescription,
+    keyBenefit: input.keyBenefit,
+    targetAudience: input.targetAudience,
+    objective: input.objective,
+    style: input.style,
+    platform: input.platform,
+    aspectRatio: input.aspectRatio,
+    count: 1,
+    diversify: false,
+  });
+
+  if (!best) {
+    throw new PromptEngineError('NO_PROMPT_MATCH', 'No suitable advertising concept was found for the provided input.');
+  }
+
+  const selected = getPrompt(best.id);
+  if (!selected) {
+    throw new PromptEngineError('DATA_INTEGRITY_ERROR', 'The selected advertising concept could not be loaded.');
+  }
+
+  const productName =
+    input.productName?.trim() || input.brandName?.trim() || input.productType?.trim() || 'the advertised product';
+
+  const composed = composePrompt({
+    promptId: selected.id,
+    productName,
+    brandName: input.brandName,
+    productDescription: input.productDescription,
+    keyBenefit: input.keyBenefit,
+    targetAudience: input.targetAudience,
+    copyText: input.copyText,
+    platform: input.platform,
+    aspectRatio: input.aspectRatio,
+    hasReferenceImage: input.hasReferenceImage,
+    extraInstructions: input.extraInstructions,
+  });
+
+  return {
+    prompt: composed.prompt,
+    concept: {
+      id: selected.id,
+      name: selected.title,
+      visualConcept: selected.visualConcept,
+      style: input.style?.trim() || selected.styleTags[0] || 'commercial',
+      styleTags: selected.styleTags,
+      objective: input.objective?.trim() || selected.objectives[0] || 'advertising',
+      matchScore: best.score,
+      matchReasons: best.matchReasons,
+    },
+    aspectRatio: composed.aspectRatio,
+    platform: composed.platform,
+    recommendedModels: composed.recommendedModels,
   };
 }
