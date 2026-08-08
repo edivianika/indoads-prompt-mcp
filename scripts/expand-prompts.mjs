@@ -129,12 +129,19 @@ const additions = seeds.map(([id, category, title, visualConcept, styleTags, qua
   };
 });
 
-const merged = [...base, ...additions];
+// Safe on repeated service restarts: strip any v2 IDs before re-merging.
+const seedIds = new Set(seeds.map(([id]) => id));
+const cleanBase = base.filter((prompt) => !seedIds.has(prompt.id));
+const merged = [...cleanBase, ...additions];
 const ids = new Set(merged.map((prompt) => prompt.id));
 if (merged.length !== 200 || ids.size !== 200) {
   throw new Error(`Expected 200 unique prompts, got ${merged.length} prompts / ${ids.size} unique IDs`);
 }
 
 mkdirSync('dist/data', { recursive: true });
-writeFileSync('dist/data/prompts.json', `${JSON.stringify(merged, null, 2)}\n`);
-console.log(`Expanded IndoAds prompt library: ${base.length} + ${additions.length} = ${merged.length}`);
+const payload = `${JSON.stringify(merged, null, 2)}\n`;
+writeFileSync('dist/data/prompts.json', payload);
+if (process.argv.includes('--runtime')) {
+  writeFileSync('src/data/prompts.json', payload);
+}
+console.log(`Expanded IndoAds prompt library: ${cleanBase.length} + ${additions.length} = ${merged.length}`);
