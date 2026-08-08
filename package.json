@@ -1,6 +1,6 @@
 {
   "name": "indoads-prompt-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "Retrieval-first advertising prompt library exposed through MCP and REST/OpenAPI for ChatGPT.",
