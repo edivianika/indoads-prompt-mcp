@@ -34,6 +34,9 @@ export interface SearchInput {
   query?: string;
   category?: string;
   productType?: string;
+  productDescription?: string;
+  keyBenefit?: string;
+  targetAudience?: string;
   objective?: string;
   style?: string;
   platform?: string;
@@ -64,7 +67,43 @@ export interface ComposeInput {
   keyBenefit?: string;
   targetAudience?: string;
   copyText?: string;
+  platform?: string;
   aspectRatio?: string;
   hasReferenceImage?: boolean;
   extraInstructions?: string;
+}
+
+export interface GenerateAdPromptInput {
+  query?: string;
+  category?: string;
+  productType?: string;
+  productName?: string;
+  brandName?: string;
+  productDescription?: string;
+  keyBenefit?: string;
+  targetAudience?: string;
+  objective?: string;
+  style?: string;
+  platform?: string;
+  aspectRatio?: string;
+  copyText?: string;
+  hasReferenceImage?: boolean;
+  extraInstructions?: string;
+}
+
+export interface GenerateAdPromptResult {
+  prompt: string;
+  concept: {
+    id: string;
+    name: string;
+    visualConcept: string;
+    style: string;
+    styleTags: string[];
+    objective: string;
+    matchScore: number;
+    matchReasons: string[];
+  };
+  aspectRatio: string;
+  platform: string;
+  recommendedModels: string[];
 }
