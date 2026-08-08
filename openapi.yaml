@@ -1,15 +1,38 @@
 openapi: 3.1.0
 info:
   title: IndoAds Prompt Engine
-  version: 0.1.0
-  description: Search, retrieve and compose high-quality advertising image prompts. This API does not generate images.
+  version: 0.3.0
+  description: Search, retrieve, select and compose high-quality advertising image prompts. This API does not generate images.
 servers:
   - url: https://YOUR_DOMAIN
 paths:
+  /api/generate:
+    post:
+      operationId: generateAdPrompt
+      summary: Generate a final advertising image prompt in one call.
+      description: Use this as the default operation when the user wants to create an advertisement or advertising visual directly. It selects the best concept internally and returns the final image-generation prompt, so no recommend/get/compose chain is required.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateAdPromptInput'
+      responses:
+        '200':
+          description: Final prompt and selected concept metadata.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateAdPromptResult'
+        '400':
+          description: Invalid or insufficient request parameters.
+        '503':
+          description: Prompt database unavailable.
   /api/recommend:
     post:
       operationId: recommendAdPrompts
-      summary: Recommend diverse advertising prompt concepts for a product.
+      summary: Recommend multiple diverse advertising prompt concepts for a product.
+      description: Use when the user explicitly wants concept options or wants to choose a concept. For direct ad creation, prefer generateAdPrompt.
       requestBody:
         required: true
         content:
@@ -28,7 +51,8 @@ paths:
   /api/search:
     post:
       operationId: searchAdPrompts
-      summary: Search advertising prompt concepts using filters and natural language.
+      summary: Search or browse advertising prompt concepts using filters and natural language.
+      description: Use for library exploration. For a direct finished ad prompt, prefer generateAdPrompt.
       requestBody:
         required: true
         content:
@@ -47,7 +71,8 @@ paths:
   /api/prompts/{id}:
     get:
       operationId: getAdPrompt
-      summary: Get the full structured prompt concept by ID.
+      summary: Get the full structured prompt concept by a known ID.
+      description: Do not call after generateAdPrompt; generateAdPrompt already returns the selected concept metadata and final prompt.
       parameters:
         - name: id
           in: path
@@ -57,10 +82,13 @@ paths:
       responses:
         '200':
           description: Prompt template.
+        '404':
+          description: Prompt not found.
   /api/compose:
     post:
       operationId: composeAdPrompt
-      summary: Compose a final image-generation prompt from a selected concept and product details.
+      summary: Compose a final image-generation prompt from an already selected concept ID.
+      description: Use only when promptId is already known. For direct ad creation without a selected ID, prefer generateAdPrompt.
       requestBody:
         required: true
         content:
@@ -70,6 +98,8 @@ paths:
       responses:
         '200':
           description: Final prompt ready to send to an image model.
+        '404':
+          description: Prompt ID not found.
   /api/taxonomy:
     get:
       operationId: listPromptTaxonomy
@@ -89,6 +119,10 @@ components:
         productType:
           type: string
         productDescription:
+          type: string
+        keyBenefit:
+          type: string
+        targetAudience:
           type: string
         objective:
           type: string
@@ -142,9 +176,57 @@ components:
         keyBenefit: { type: string }
         targetAudience: { type: string }
         copyText: { type: string }
+        platform: { type: string }
         aspectRatio: { type: string }
         hasReferenceImage: { type: boolean }
         extraInstructions: { type: string }
+    GenerateAdPromptInput:
+      type: object
+      description: All fields are optional, but provide at least one product or advertising detail.
+      properties:
+        query: { type: string }
+        category: { type: string }
+        productType: { type: string }
+        productName: { type: string }
+        brandName: { type: string }
+        productDescription: { type: string }
+        keyBenefit: { type: string }
+        targetAudience: { type: string }
+        objective: { type: string }
+        style: { type: string }
+        platform: { type: string }
+        aspectRatio: { type: string }
+        copyText: { type: string }
+        hasReferenceImage: { type: boolean }
+        extraInstructions: { type: string }
+    GenerateAdPromptResult:
+      type: object
+      required: [prompt, concept, aspectRatio, platform, recommendedModels]
+      properties:
+        prompt:
+          type: string
+          description: Final image-generation prompt ready for the image generator.
+        concept:
+          type: object
+          required: [id, name, visualConcept, style, styleTags, objective, matchScore, matchReasons]
+          properties:
+            id: { type: string }
+            name: { type: string }
+            visualConcept: { type: string }
+            style: { type: string }
+            styleTags:
+              type: array
+              items: { type: string }
+            objective: { type: string }
+            matchScore: { type: number }
+            matchReasons:
+              type: array
+              items: { type: string }
+        aspectRatio: { type: string }
+        platform: { type: string }
+        recommendedModels:
+          type: array
+          items: { type: string }
   securitySchemes:
     bearerAuth:
       type: http
