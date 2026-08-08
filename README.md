@@ -7,36 +7,42 @@ A retrieval-first prompt engine for commercial advertising. It **does not genera
 - Remote MCP endpoint: `POST /mcp`
 - REST API for Custom GPT Actions
 - OpenAPI schema: `/openapi.yaml`
-- 40+ curated seed concepts across F&B, beauty, fashion, tech, home/property, automotive and general e-commerce
-- Search/ranking with category, product type, objective, style, platform, ratio and model hints
-- Diversity-aware recommendation so the top 10 are not ten versions of the same idea
-- Product-reference fidelity block to protect packaging/logo details
-- Dockerfile + Render deployment blueprint
+- Curated concepts across F&B, beauty, fashion, tech, home/property, automotive and general e-commerce
+- Search/ranking with product fit, objective, style, platform, ratio and contextual product/audience details
+- Diversity-aware recommendation
+- Product-reference fidelity protection
 - Optional Bearer API key
+- Read-only MCP annotations for prompt tools
 
 ## Core MCP tools
 
-1. `recommend_ad_prompts` — best first call after ChatGPT analyzes an uploaded product image.
-2. `search_ad_prompts` — targeted search across the library.
-3. `get_ad_prompt` — inspect one concept in full.
-4. `compose_ad_prompt` — build the final model-ready prompt.
-5. `list_prompt_taxonomy` — discover supported filters.
+1. `generateAdPrompt` — **preferred default for direct ad creation**. Selects the best concept and composes the final image-generation prompt in one external call.
+2. `recommend_ad_prompts` — return multiple concept options when the user explicitly wants to choose.
+3. `search_ad_prompts` — browse/search the concept library.
+4. `get_ad_prompt` — inspect one known concept ID.
+5. `compose_ad_prompt` — compose from an already selected concept ID.
+6. `list_prompt_taxonomy` — discover supported filters.
 
-## Recommended ChatGPT workflow
+All of the tools above only read/process the server's prompt library. They do not mutate external state. The MCP registrations advertise read-only/idempotent/closed-world annotations supported by the current MCP SDK. These annotations are client hints; they do not guarantee that a ChatGPT permission dialog will be skipped.
 
-1. User uploads a product image.
-2. ChatGPT identifies product type, category, visible packaging, dominant colors, likely objective, platform and ratio.
-3. ChatGPT calls `recommend_ad_prompts` and asks for 6–10 **diverse** concepts.
-4. Present only concept names + one-line explanations; do not dump full prompts yet.
-5. User chooses a concept.
-6. ChatGPT calls `compose_ad_prompt` with `hasReferenceImage=true` and the visual details it saw in the upload.
-7. Return the final prompt or send it to the selected image-generation capability.
+## Recommended one-call ChatGPT workflow
+
+1. User uploads/describes a product and asks to make an ad.
+2. ChatGPT infers useful fields such as category, product type, product description, objective, target audience, style, platform and aspect ratio.
+3. ChatGPT calls `generateAdPrompt` once.
+4. The server ranks concepts internally, selects the best one, composes the final prompt, and returns the prompt plus concept metadata.
+5. ChatGPT uses the returned `prompt` directly with image generation if the user asks to generate.
+
+Do **not** call `recommend_ad_prompts → get_ad_prompt → compose_ad_prompt` after `generateAdPrompt` has already returned a final prompt.
+
+The older multi-step workflow remains available for users who explicitly want multiple concepts before choosing.
 
 ## Local run
 
 ```bash
 cp .env.example .env
 npm install
+npm test
 npm run dev
 ```
 
@@ -46,7 +52,42 @@ Health check:
 curl http://localhost:3000/health
 ```
 
-Search:
+One-call generate test:
+
+```bash
+curl -X POST http://localhost:3000/api/generate \
+  -H 'content-type: application/json' \
+  -d '{
+    "productName":"Lumina Serum",
+    "brandName":"Lumina",
+    "productDescription":"Brightening facial serum with niacinamide",
+    "keyBenefit":"Brighter looking skin",
+    "targetAudience":"Women 20-35",
+    "objective":"conversion",
+    "style":"premium",
+    "platform":"Instagram",
+    "aspectRatio":"4:5",
+    "copyText":"Glow Starts Here"
+  }'
+```
+
+Expected response includes:
+
+```json
+{
+  "prompt": "...final image-generation prompt...",
+  "concept": {
+    "id": "...",
+    "name": "...",
+    "style": "premium",
+    "objective": "conversion"
+  },
+  "aspectRatio": "4:5",
+  "platform": "Instagram"
+}
+```
+
+Recommendation flow when the user wants options:
 
 ```bash
 curl -X POST http://localhost:3000/api/recommend \
@@ -54,12 +95,12 @@ curl -X POST http://localhost:3000/api/recommend \
   -d '{"category":"fnb","productType":"sambal","query":"spicy authentic premium","aspectRatio":"4:5","count":6}'
 ```
 
-Compose:
+Compose from a known ID:
 
 ```bash
 curl -X POST http://localhost:3000/api/compose \
   -H 'content-type: application/json' \
-  -d '{"promptId":"FNB-001","productName":"Sambel Pecel Marimar","productDescription":"standing pouch with red-green label","hasReferenceImage":true,"aspectRatio":"4:5"}'
+  -d '{"promptId":"FNB-001","productName":"Sambel Pecel Marimar","productDescription":"standing pouch with red-green label","hasReferenceImage":true,"platform":"Instagram","aspectRatio":"4:5"}'
 ```
 
 ## Use from a Custom GPT through Actions
@@ -68,17 +109,9 @@ Deploy this project to a public HTTPS domain, then in the GPT editor open **Acti
 
 `https://YOUR_DOMAIN/openapi.yaml`
 
-If you set `INDOADS_API_KEY`, configure the GPT Action authentication as a Bearer API key with the same value. If the variable is blank, the API is read-only and unauthenticated.
+The OpenAPI operation `generateAdPrompt` is the preferred action for direct “make an ad” requests. Existing operation IDs remain available for backward compatibility.
 
-### Suggested GPT instruction
-
-```text
-When the user asks for an ad image or uploads a product, do not immediately invent one generic prompt.
-First analyze the uploaded product visually. Call recommendAdPrompts with the inferred category, product type, objective, desired style, platform, aspect ratio, and a concise productDescription. Ask for 6-10 diverse concepts.
-Present the concept menu with IDs. After the user chooses, call composeAdPrompt and include the exact visible product details, hasReferenceImage=true, and the desired aspect ratio.
-Never claim the Action generated an image. It only retrieves and composes prompts.
-Preserve product packaging, label, logo, brand colors and proportions exactly when a reference image is supplied.
-```
+If you set `INDOADS_API_KEY`, configure the GPT Action authentication as a Bearer API key with the same value. If the variable is blank, the API remains read-only and unauthenticated.
 
 ## Use as Remote MCP
 
@@ -86,36 +119,11 @@ Deploy on HTTPS and point the MCP-capable client to:
 
 `https://YOUR_DOMAIN/mcp`
 
-The server exposes the same retrieval engine through MCP tools. The MCP implementation is stateless and read-only.
+The MCP implementation is stateless and read-only. The privacy endpoint remains available at `/privacy`.
 
 ## Add more prompt concepts
 
-Edit `src/data/prompts.json`. Each entry stores art-direction components rather than a single giant prompt:
-
-- category/product fit
-- objective
-- visual concept
-- style tags
-- composition
-- lighting
-- camera
-- background/set
-- effects
-- copy zone
-- negative constraints
-- model hints
-- quality score
-
-This makes the library easier to search, rank and remix than storing raw text blobs only.
-
-## Next production upgrades
-
-- Move corpus to Postgres/Supabase with pgvector or another vector index.
-- Add admin CRUD + version history for prompt templates.
-- Add creative-performance fields (CTR, CPC, CPA, ROAS) and re-rank using real ad results.
-- Add an embedding layer for semantic search.
-- Add tenant/private libraries.
-- Add OAuth for published MCP apps.
+Edit the prompt corpus/seeds used by the project. Each concept stores art-direction components rather than a single giant prompt, including product/category fit, objective, visual concept, style tags, composition, lighting, camera, background/set, effects, copy zone, negative constraints, model hints and quality score.
 
 ## License
 
