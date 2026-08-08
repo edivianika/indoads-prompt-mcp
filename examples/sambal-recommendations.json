@@ -1,0 +1,204 @@
+[
+  {
+    "id": "FNB-002",
+    "title": "Serving Suggestion Hero",
+    "visualConcept": "Packshot plus irresistible serving suggestion",
+    "score": 25.02,
+    "matchReasons": [
+      "quality 9.5/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:authentic,appetite"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "appetite",
+      "authentic",
+      "commercial food"
+    ],
+    "productTypes": [
+      "sambal",
+      "sauce",
+      "condiment",
+      "seasoning"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9.5
+  },
+  {
+    "id": "FNB-004",
+    "title": "Spicy Heat Without Fire",
+    "visualConcept": "Visual heat through color and ingredients",
+    "score": 24.99,
+    "matchReasons": [
+      "quality 9.4/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:spicy,appetite"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "spicy",
+      "bold",
+      "high contrast"
+    ],
+    "productTypes": [
+      "sambal",
+      "hot sauce",
+      "spicy snack"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9.4
+  },
+  {
+    "id": "FNB-003",
+    "title": "Rustic Authentic Origin",
+    "visualConcept": "Authentic craft and origin story",
+    "score": 23.32,
+    "matchReasons": [
+      "quality 9.2/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:authentic"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "rustic",
+      "heritage",
+      "warm"
+    ],
+    "productTypes": [
+      "traditional food",
+      "coffee",
+      "spice",
+      "snack",
+      "sambal"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9.2
+  },
+  {
+    "id": "FNB-008",
+    "title": "Premium Food Gift",
+    "visualConcept": "Premium edible gift presentation",
+    "score": 23.29,
+    "matchReasons": [
+      "quality 9.1/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:premium"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "luxury",
+      "giftable",
+      "warm"
+    ],
+    "productTypes": [
+      "coffee",
+      "snack",
+      "bakery",
+      "gift box",
+      "traditional food",
+      "sambal"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9.1
+  },
+  {
+    "id": "FNB-007",
+    "title": "Top-Down Feast",
+    "visualConcept": "Top-down table spread with product anchor",
+    "score": 23.25,
+    "matchReasons": [
+      "quality 9.0/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:appetite"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "lifestyle",
+      "abundant",
+      "social"
+    ],
+    "productTypes": [
+      "snack",
+      "meal",
+      "bakery",
+      "catering",
+      "sauce"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9
+  },
+  {
+    "id": "FNB-001",
+    "title": "Ingredient Explosion",
+    "visualConcept": "Ingredient explosion around hero pack",
+    "score": 23.46,
+    "matchReasons": [
+      "quality 9.6/10",
+      "category:fnb",
+      "product:sambal",
+      "ratio:4:5",
+      "query:appetite"
+    ],
+    "categories": [
+      "fnb"
+    ],
+    "styleTags": [
+      "appetite",
+      "dynamic",
+      "commercial food"
+    ],
+    "productTypes": [
+      "sambal",
+      "sauce",
+      "seasoning",
+      "snack",
+      "food pouch"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "qualityScore": 9.6
+  }
+]

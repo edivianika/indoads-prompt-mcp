@@ -1,0 +1,29 @@
+{
+  "name": "indoads-prompt-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Retrieval-first advertising prompt library exposed through MCP and REST/OpenAPI for ChatGPT.",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsc && mkdir -p dist/data && cp src/data/*.json dist/data/",
+    "start:prod": "node dist/server.js",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0-beta.5",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "express": "^5.2.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^6.0.0"
+  }
+}

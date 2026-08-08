@@ -1,0 +1,155 @@
+openapi: 3.1.0
+info:
+  title: IndoAds Prompt Engine
+  version: 0.1.0
+  description: Search, retrieve and compose high-quality advertising image prompts. This API does not generate images.
+servers:
+  - url: https://YOUR_DOMAIN
+paths:
+  /api/recommend:
+    post:
+      operationId: recommendAdPrompts
+      summary: Recommend diverse advertising prompt concepts for a product.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchInput'
+      responses:
+        '200':
+          description: Ranked prompt recommendations.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SearchResult'
+  /api/search:
+    post:
+      operationId: searchAdPrompts
+      summary: Search advertising prompt concepts using filters and natural language.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchInput'
+      responses:
+        '200':
+          description: Ranked results.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SearchResult'
+  /api/prompts/{id}:
+    get:
+      operationId: getAdPrompt
+      summary: Get the full structured prompt concept by ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Prompt template.
+  /api/compose:
+    post:
+      operationId: composeAdPrompt
+      summary: Compose a final image-generation prompt from a selected concept and product details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComposeInput'
+      responses:
+        '200':
+          description: Final prompt ready to send to an image model.
+  /api/taxonomy:
+    get:
+      operationId: listPromptTaxonomy
+      summary: List available categories, styles, product types, objectives, platforms and ratios.
+      responses:
+        '200':
+          description: Prompt taxonomy.
+components:
+  schemas:
+    SearchInput:
+      type: object
+      properties:
+        query:
+          type: string
+        category:
+          type: string
+        productType:
+          type: string
+        productDescription:
+          type: string
+        objective:
+          type: string
+        style:
+          type: string
+        platform:
+          type: string
+        aspectRatio:
+          type: string
+        model:
+          type: string
+        count:
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 8
+        diversify:
+          type: boolean
+          default: true
+    SearchResult:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        visualConcept: { type: string }
+        score: { type: number }
+        matchReasons:
+          type: array
+          items: { type: string }
+        categories:
+          type: array
+          items: { type: string }
+        styleTags:
+          type: array
+          items: { type: string }
+        productTypes:
+          type: array
+          items: { type: string }
+        aspectRatios:
+          type: array
+          items: { type: string }
+        qualityScore: { type: number }
+    ComposeInput:
+      type: object
+      required: [promptId, productName]
+      properties:
+        promptId: { type: string }
+        productName: { type: string }
+        brandName: { type: string }
+        productDescription: { type: string }
+        keyBenefit: { type: string }
+        targetAudience: { type: string }
+        copyText: { type: string }
+        aspectRatio: { type: string }
+        hasReferenceImage: { type: boolean }
+        extraInstructions: { type: string }
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Optional. Required only if INDOADS_API_KEY is set on the server.
+security:
+  - bearerAuth: []
+  - {}

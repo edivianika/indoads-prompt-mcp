@@ -1,0 +1,2584 @@
+[
+  {
+    "id": "GEN-001",
+    "title": "Premium Pedestal Hero",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "consumer goods"
+    ],
+    "objectives": [
+      "conversion",
+      "brand awareness"
+    ],
+    "visualConcept": "Luxury pedestal hero",
+    "styleTags": [
+      "premium",
+      "minimal",
+      "studio"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Place the product as a singular hero on a sculptural pedestal with restrained premium art direction.",
+    "composition": "Centered or slightly off-center hero, strong negative space, clean geometric balance, clear silhouette.",
+    "lighting": "Large soft key plus controlled rim light, subtle specular highlights, believable contact shadow.",
+    "camera": "85mm commercial product lens, eye-level to slight low angle, crisp hero with gentle depth falloff.",
+    "background": "Seamless tonal gradient set matched to the brand palette, no visual clutter.",
+    "effects": "Very subtle atmospheric haze or glow only if it improves separation; restrained reflections.",
+    "copyZone": "Reserve upper-left or upper-right negative space for headline and CTA.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-002",
+    "title": "Floating Product Momentum",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "bottle",
+      "box",
+      "pouch"
+    ],
+    "objectives": [
+      "conversion",
+      "launch"
+    ],
+    "visualConcept": "Floating dynamic hero",
+    "styleTags": [
+      "dynamic",
+      "premium",
+      "commercial"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.3,
+    "sceneDirection": "Suspend the product in a controlled dynamic moment as if caught mid-motion, with brand-relevant supporting elements orbiting around it.",
+    "composition": "Diagonal energy line, hero occupies 45-60% of frame, supporting elements never cover the label.",
+    "lighting": "Crisp studio flash with directional rim lights that freeze motion.",
+    "camera": "50-70mm commercial lens, fast-shutter aesthetic, sharp packaging edges.",
+    "background": "Minimal gradient or textured set with strong foreground/background separation.",
+    "effects": "Fine particles, ribbons, droplets or ingredients used sparingly to communicate motion.",
+    "copyZone": "Keep one calm negative-space quadrant for copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-003",
+    "title": "Monochrome Brand World",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "cosmetic",
+      "tech accessory"
+    ],
+    "objectives": [
+      "brand awareness",
+      "launch"
+    ],
+    "visualConcept": "Monochrome brand-color world",
+    "styleTags": [
+      "bold",
+      "minimal",
+      "brand-led"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Build the entire set from shades of one dominant brand color while keeping the product fully legible.",
+    "composition": "Graphic centered hero with layered geometric forms and disciplined spacing.",
+    "lighting": "Soft directional studio light creating tonal separation inside the monochrome palette.",
+    "camera": "70-100mm clean catalog-commercial look, minimal perspective distortion.",
+    "background": "Color-block set, matte plinths and gentle gradients in one hue family.",
+    "effects": "Subtle long shadows and tonal reflections; no rainbow effects.",
+    "copyZone": "Use a clean vertical or side column for headline/copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-004",
+    "title": "Editorial Minimal",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "premium product",
+      "fashion accessory",
+      "beauty",
+      "home decor"
+    ],
+    "objectives": [
+      "brand awareness",
+      "premium positioning"
+    ],
+    "visualConcept": "Editorial negative-space still life",
+    "styleTags": [
+      "editorial",
+      "luxury",
+      "minimal"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.4,
+    "sceneDirection": "Treat the product like a high-end magazine still life with quiet confidence and sophisticated restraint.",
+    "composition": "Asymmetrical editorial crop, intentional empty space, one or two sculptural props maximum.",
+    "lighting": "Window-like soft directional light with elegant shadow geometry.",
+    "camera": "Medium-format editorial character, 80mm equivalent, refined texture and subtle grain.",
+    "background": "Stone, paper, plaster or brushed metal surface selected to complement the product.",
+    "effects": "No gimmicky particles; let material, shadow and proportion create interest.",
+    "copyZone": "Large clean area suitable for premium typography.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-005",
+    "title": "Marketplace Clean Packshot",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "consumer goods"
+    ],
+    "objectives": [
+      "conversion",
+      "catalog"
+    ],
+    "visualConcept": "Marketplace white-background hero",
+    "styleTags": [
+      "clean",
+      "ecommerce",
+      "catalog"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "1:1",
+      "4:5"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Create a conversion-focused clean packshot that communicates exact product form and packaging at a glance.",
+    "composition": "Product centered, straight and fully visible, generous margins, optional small shadow only.",
+    "lighting": "Large diffused softbox lighting with even label readability and controlled highlights.",
+    "camera": "85-105mm product lens, front three-quarter or straight-on depending packaging.",
+    "background": "Pure or very light neutral background suitable for marketplace listing rules.",
+    "effects": "No decorative effects; prioritize fidelity and legibility.",
+    "copyZone": "No headline inside the image unless explicitly supplied.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-006",
+    "title": "Macro Material Desire",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "premium product",
+      "beauty",
+      "fashion accessory",
+      "food packaging"
+    ],
+    "objectives": [
+      "consideration",
+      "premium positioning"
+    ],
+    "visualConcept": "Extreme material macro",
+    "styleTags": [
+      "macro",
+      "sensory",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Show a cinematic macro detail of the most desirable material, texture, embossing, liquid, fabric or finish, with the product still identifiable.",
+    "composition": "Macro foreground detail with recognizable product geometry receding into frame.",
+    "lighting": "Raking side light that reveals micro-texture and material realism.",
+    "camera": "100mm macro lens look, shallow depth of field, precise focal plane.",
+    "background": "Dark or neutral controlled studio environment.",
+    "effects": "Micro highlights, droplets or texture only when physically appropriate.",
+    "copyZone": "Reserve a quiet edge for a short benefit line.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-007",
+    "title": "Benefit Callout Layout",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "consumer goods",
+      "tech accessory",
+      "home product"
+    ],
+    "objectives": [
+      "consideration",
+      "conversion"
+    ],
+    "visualConcept": "Product plus feature-callout architecture",
+    "styleTags": [
+      "informative",
+      "clean",
+      "commercial"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.9,
+    "sceneDirection": "Create a premium ad layout where the hero product remains dominant and 2-3 visual benefit zones can be added around it.",
+    "composition": "Hero on one side, clean modular negative space on the other; clear hierarchy and alignment grid.",
+    "lighting": "Neutral studio lighting with precise edge separation.",
+    "camera": "70-85mm commercial lens, low distortion, crisp detail.",
+    "background": "Minimal branded set with faint grid or architectural forms.",
+    "effects": "Use subtle connector lines or icon placeholders only, not fake text.",
+    "copyZone": "Reserve structured copy modules for headline, 2-3 benefits and CTA.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-008",
+    "title": "Cinematic Environment Hero",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "premium product",
+      "outdoor product",
+      "beverage",
+      "automotive accessory"
+    ],
+    "objectives": [
+      "brand awareness",
+      "launch"
+    ],
+    "visualConcept": "Cinematic environmental product hero",
+    "styleTags": [
+      "cinematic",
+      "dramatic",
+      "story-driven"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.3,
+    "sceneDirection": "Place the product in a believable cinematic environment that expresses its brand promise without losing packshot clarity.",
+    "composition": "Hero foreground with environment creating depth and narrative; product stays the brightest/readable focal point.",
+    "lighting": "Motivated cinematic lighting with practical sources, controlled highlights and realistic shadow direction.",
+    "camera": "35-50mm advertising lens, slightly low perspective, premium filmic depth.",
+    "background": "Contextual location or constructed set matched to use case.",
+    "effects": "Atmosphere, dust, mist or reflections only when naturally motivated.",
+    "copyZone": "Use sky/wall/negative-space region for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-001",
+    "title": "Ingredient Explosion",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "sambal",
+      "sauce",
+      "seasoning",
+      "snack",
+      "food pouch"
+    ],
+    "objectives": [
+      "conversion",
+      "appetite appeal"
+    ],
+    "visualConcept": "Ingredient explosion around hero pack",
+    "styleTags": [
+      "appetite",
+      "dynamic",
+      "commercial food"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.6,
+    "sceneDirection": "Hero package surrounded by a frozen burst of its real core ingredients, communicating freshness, flavor and intensity.",
+    "composition": "Package centered and unobstructed; ingredients form an arc rather than random clutter.",
+    "lighting": "High-speed food photography lighting with crisp rim highlights and rich appetizing contrast.",
+    "camera": "70mm product-food lens, fast-shutter look, tack-sharp label.",
+    "background": "Warm neutral or brand-color gradient set with a clean base surface.",
+    "effects": "Controlled ingredient particles, chili flakes, herbs or crumbs; realistic scale and physics.",
+    "copyZone": "Reserve top third for a short appetite-led headline.",
+    "avoid": [
+      "ingredients that are not actually relevant",
+      "mess covering the label",
+      "cartoon fire"
+    ]
+  },
+  {
+    "id": "FNB-002",
+    "title": "Serving Suggestion Hero",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "sambal",
+      "sauce",
+      "condiment",
+      "seasoning"
+    ],
+    "objectives": [
+      "conversion",
+      "consideration"
+    ],
+    "visualConcept": "Packshot plus irresistible serving suggestion",
+    "styleTags": [
+      "appetite",
+      "authentic",
+      "commercial food"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Pair the exact package with one beautifully plated serving suggestion that demonstrates how the product is enjoyed.",
+    "composition": "Product and dish form a balanced two-hero composition; packaging remains fully readable.",
+    "lighting": "Warm side light with glossy food highlights, soft fill and realistic steam where appropriate.",
+    "camera": "50-70mm food-commercial lens, natural table-height perspective.",
+    "background": "Clean dining or rustic tabletop context with limited props.",
+    "effects": "Subtle steam, sauce gloss and fresh garnish; no excessive flying ingredients.",
+    "copyZone": "Leave clean upper background for headline and price/CTA area.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-003",
+    "title": "Rustic Authentic Origin",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "traditional food",
+      "coffee",
+      "spice",
+      "snack",
+      "sambal"
+    ],
+    "objectives": [
+      "brand awareness",
+      "trust"
+    ],
+    "visualConcept": "Authentic craft and origin story",
+    "styleTags": [
+      "rustic",
+      "heritage",
+      "warm"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Present the product as authentic, handcrafted and rooted in local ingredients or culinary tradition.",
+    "composition": "Hero product on natural surface with 2-4 culturally appropriate ingredient/context cues, carefully curated.",
+    "lighting": "Warm directional morning light with soft shadow and tactile texture.",
+    "camera": "50mm documentary-commercial hybrid, realistic perspective and rich detail.",
+    "background": "Wood, woven textile, stone or kitchen context used tastefully rather than as cliché.",
+    "effects": "Natural steam, crumbs or ingredient texture; no fantasy effects.",
+    "copyZone": "Reserve calm side area for origin story or trust statement.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-004",
+    "title": "Spicy Heat Without Fire",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "sambal",
+      "hot sauce",
+      "spicy snack"
+    ],
+    "objectives": [
+      "conversion",
+      "appetite appeal"
+    ],
+    "visualConcept": "Visual heat through color and ingredients",
+    "styleTags": [
+      "spicy",
+      "bold",
+      "high contrast"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.4,
+    "sceneDirection": "Communicate intense spice using deep reds, chili texture, warm highlights and energetic composition without literal flames.",
+    "composition": "Large hero package, diagonal chili forms and sauce texture guiding the eye toward the label.",
+    "lighting": "Punchy directional studio light, glossy red highlights, controlled dark fill.",
+    "camera": "60-85mm advertising lens, crisp product with selective macro details.",
+    "background": "Deep red-to-black gradient set or dark stone surface.",
+    "effects": "Fine chili particles, sauce ribbon or heat haze kept subtle and premium.",
+    "copyZone": "Reserve upper-left area for a bold short headline.",
+    "avoid": [
+      "literal flames",
+      "cartoon chili faces",
+      "unsafe eating imagery"
+    ]
+  },
+  {
+    "id": "FNB-005",
+    "title": "Refreshing Splash Beverage",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "drink",
+      "juice",
+      "bottled beverage",
+      "coffee drink"
+    ],
+    "objectives": [
+      "conversion",
+      "refreshment"
+    ],
+    "visualConcept": "Frozen splash refreshment hero",
+    "styleTags": [
+      "fresh",
+      "dynamic",
+      "cold"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.6,
+    "sceneDirection": "Create a high-speed refreshment moment with the bottle/can as exact hero and a clean liquid splash supporting it.",
+    "composition": "Hero vertical and readable; splash wraps behind, never across logo or key label text.",
+    "lighting": "Bright backlight and edge lighting with chilled highlights.",
+    "camera": "70-100mm high-speed beverage photography look.",
+    "background": "Cool gradient or clean translucent set.",
+    "effects": "Realistic droplets, condensation and liquid refraction; no impossible physics.",
+    "copyZone": "Open top/side area for refreshment headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-006",
+    "title": "Condensation Cold Closeup",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "drink",
+      "juice",
+      "bottled beverage"
+    ],
+    "objectives": [
+      "appetite appeal",
+      "premium positioning"
+    ],
+    "visualConcept": "Ice-cold macro bottle portrait",
+    "styleTags": [
+      "macro",
+      "refreshing",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Make the product feel freshly chilled through realistic condensation and cold surface cues.",
+    "composition": "Tight crop on bottle/can with logo and primary label still fully identifiable.",
+    "lighting": "Cool rim light with specular droplets and soft frontal label fill.",
+    "camera": "85-100mm macro-commercial look, shallow depth but readable branding.",
+    "background": "Dark cool background with subtle bokeh or refrigerated atmosphere.",
+    "effects": "Natural micro-droplets and faint cold mist.",
+    "copyZone": "Minimal copy; reserve one dark negative-space region.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-007",
+    "title": "Top-Down Feast",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "snack",
+      "meal",
+      "bakery",
+      "catering",
+      "sauce"
+    ],
+    "objectives": [
+      "consideration",
+      "appetite appeal"
+    ],
+    "visualConcept": "Top-down table spread with product anchor",
+    "styleTags": [
+      "lifestyle",
+      "abundant",
+      "social"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Build a top-down food spread that feels generous and shareable while the packaged product clearly anchors the composition.",
+    "composition": "Organized radial or grid arrangement, product near a rule-of-thirds point, food elements cropped elegantly.",
+    "lighting": "Large overhead soft source with gentle directional shadow.",
+    "camera": "True top-down 35-50mm equivalent with corrected geometry.",
+    "background": "Table surface matched to brand mood; limited utensils and napkins.",
+    "effects": "Natural crumbs, sauce marks and garnish used intentionally.",
+    "copyZone": "Reserve a clean plate/napkin/negative-space area for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FNB-008",
+    "title": "Premium Food Gift",
+    "categories": [
+      "fnb"
+    ],
+    "productTypes": [
+      "coffee",
+      "snack",
+      "bakery",
+      "gift box",
+      "traditional food",
+      "sambal"
+    ],
+    "objectives": [
+      "premium positioning",
+      "seasonal"
+    ],
+    "visualConcept": "Premium edible gift presentation",
+    "styleTags": [
+      "luxury",
+      "giftable",
+      "warm"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Stage the product as a refined gift with premium unboxing cues and restrained celebratory detail.",
+    "composition": "Hero box/package open or paired with secondary item, elegant diagonal arrangement, no clutter.",
+    "lighting": "Warm soft key with fine rim accents and tasteful shadow depth.",
+    "camera": "70-85mm premium still-life lens.",
+    "background": "Textured paper, fabric or wood set in sophisticated neutral/brand tones.",
+    "effects": "Ribbon, card or festive glints used minimally; avoid cheap glitter.",
+    "copyZone": "Reserve upper band for seasonal greeting or offer.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "BEA-001",
+    "title": "Botanical Ingredient Orbit",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "serum",
+      "skincare",
+      "soap",
+      "shampoo",
+      "cosmetic"
+    ],
+    "objectives": [
+      "conversion",
+      "natural positioning"
+    ],
+    "visualConcept": "Botanical ingredients orbiting a clean hero",
+    "styleTags": [
+      "beauty",
+      "botanical",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Place the beauty product as pristine hero while only its relevant botanical ingredients orbit in an elegant controlled composition.",
+    "composition": "Vertical hero centered with asymmetric ingredient arc; label unobstructed.",
+    "lighting": "Soft beauty key light plus translucent rim highlights.",
+    "camera": "85-100mm beauty product lens, polished glass/plastic detail.",
+    "background": "Light stone, cream or soft brand-color gradient.",
+    "effects": "Tiny water droplets or floating petals/leaves used sparingly and realistically.",
+    "copyZone": "Reserve upper-right or side negative space for benefit headline.",
+    "avoid": [
+      "unverified medical claims",
+      "random flowers unrelated to formula",
+      "overly wet product label"
+    ]
+  },
+  {
+    "id": "BEA-002",
+    "title": "Hydration Water Ripple",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "serum",
+      "moisturizer",
+      "cleanser"
+    ],
+    "objectives": [
+      "conversion",
+      "benefit communication"
+    ],
+    "visualConcept": "Hydration through water and glass",
+    "styleTags": [
+      "fresh",
+      "clean",
+      "beauty"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.4,
+    "sceneDirection": "Express hydration with clean water ripples, transparent glass and luminous skin-care cues around the exact product.",
+    "composition": "Hero bottle on reflective shallow-water or glass platform, strong vertical clarity.",
+    "lighting": "Luminous soft backlight, caustic reflections and controlled front fill.",
+    "camera": "90mm beauty-commercial lens with clean specular detail.",
+    "background": "Pale aqua/white translucent environment with premium minimalism.",
+    "effects": "Water rings, refraction and micro droplets; keep physically believable.",
+    "copyZone": "Open upper area for one benefit headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "BEA-003",
+    "title": "Clinical Clean Proof",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "serum",
+      "skincare",
+      "dermocosmetic"
+    ],
+    "objectives": [
+      "trust",
+      "consideration"
+    ],
+    "visualConcept": "Clinical-clean premium product proof",
+    "styleTags": [
+      "clinical",
+      "clean",
+      "minimal"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.3,
+    "sceneDirection": "Present the product with modern laboratory cleanliness and credible precision, without implying unsupported medical certification.",
+    "composition": "Centered product with modular white/translucent forms and restrained data-like geometry.",
+    "lighting": "High-key softbox lighting, neutral white balance, crisp edges.",
+    "camera": "100mm low-distortion product lens, highly legible packaging.",
+    "background": "White, frosted glass and soft gray set with subtle depth.",
+    "effects": "Very subtle molecular or grid motifs as abstract design only.",
+    "copyZone": "Reserve clean side column for verified benefits/ingredients.",
+    "avoid": [
+      "doctor endorsement",
+      "fake clinical percentages",
+      "medical devices unless real"
+    ]
+  },
+  {
+    "id": "BEA-004",
+    "title": "Luxury Black Reflection",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "perfume",
+      "serum",
+      "cosmetic",
+      "skincare"
+    ],
+    "objectives": [
+      "premium positioning",
+      "launch"
+    ],
+    "visualConcept": "Dark luxury reflective beauty hero",
+    "styleTags": [
+      "luxury",
+      "dark",
+      "glossy"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.6,
+    "sceneDirection": "Create a high-fashion beauty still life with deep black space, polished reflection and jewel-like product highlights.",
+    "composition": "Single hero on glossy black base, centered or slightly offset, generous darkness around it.",
+    "lighting": "Narrow strip lights and controlled rim accents shaping glass/metal edges.",
+    "camera": "85mm luxury product lens, deep blacks with preserved detail.",
+    "background": "Black lacquer, smoked glass or obsidian-like set.",
+    "effects": "Subtle haze and one elegant reflection; avoid nightclub neon overload.",
+    "copyZone": "Reserve black negative space for minimal premium typography.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "BEA-005",
+    "title": "Pastel Vanity Editorial",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "cosmetic",
+      "lip product",
+      "skincare",
+      "soap"
+    ],
+    "objectives": [
+      "brand awareness",
+      "social engagement"
+    ],
+    "visualConcept": "Soft pastel vanity still life",
+    "styleTags": [
+      "pastel",
+      "editorial",
+      "feminine"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Build a modern vanity/editorial composition with soft color blocking and playful but sophisticated proportions.",
+    "composition": "Hero product with 1-3 rounded geometric props, layered depth, tidy asymmetry.",
+    "lighting": "Large diffused beauty light with gentle colored bounce.",
+    "camera": "70-90mm editorial product lens.",
+    "background": "Pastel seamless set coordinated with packaging, no generic bedroom clutter.",
+    "effects": "Soft shadows, translucent acrylic accents and subtle reflections.",
+    "copyZone": "Reserve clean upper-left area for social headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "BEA-006",
+    "title": "Texture Swatch Macro",
+    "categories": [
+      "beauty"
+    ],
+    "productTypes": [
+      "cream",
+      "serum",
+      "foundation",
+      "lip product"
+    ],
+    "objectives": [
+      "consideration",
+      "sensory appeal"
+    ],
+    "visualConcept": "Product plus cosmetic texture swatch",
+    "styleTags": [
+      "macro",
+      "sensory",
+      "beauty"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.4,
+    "sceneDirection": "Pair the exact package with a beautifully controlled macro swatch of the actual product texture or color.",
+    "composition": "Package remains dominant while one tactile swatch creates foreground interest.",
+    "lighting": "Soft raking light revealing cream/liquid texture without harsh shine.",
+    "camera": "Macro beauty lens, high micro-detail, controlled depth.",
+    "background": "Neutral clean studio surface matched to product color.",
+    "effects": "Single swipe, droplet or smear; no excessive mess.",
+    "copyZone": "Reserve opposite side for shade/benefit text.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FAS-001",
+    "title": "Editorial Fashion Object",
+    "categories": [
+      "fashion"
+    ],
+    "productTypes": [
+      "shoe",
+      "bag",
+      "watch",
+      "accessory"
+    ],
+    "objectives": [
+      "premium positioning",
+      "brand awareness"
+    ],
+    "visualConcept": "High-fashion object editorial",
+    "styleTags": [
+      "fashion",
+      "editorial",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Photograph the product like a fashion magazine cover object with architectural shadows and confident styling.",
+    "composition": "Strong asymmetry or centered icon composition, sculptural prop maximum two.",
+    "lighting": "Hard-soft mixed studio light creating elegant graphic shadows.",
+    "camera": "70-100mm fashion still-life lens, crisp texture and proportion.",
+    "background": "Concrete, paper, brushed metal or saturated color-block set.",
+    "effects": "Minimal; rely on shadow geometry and material contrast.",
+    "copyZone": "Reserve masthead-like top area or side column for copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FAS-002",
+    "title": "Street Lifestyle Crop",
+    "categories": [
+      "fashion"
+    ],
+    "productTypes": [
+      "shoe",
+      "bag",
+      "watch",
+      "accessory"
+    ],
+    "objectives": [
+      "consideration",
+      "social engagement"
+    ],
+    "visualConcept": "Authentic street lifestyle detail",
+    "styleTags": [
+      "lifestyle",
+      "urban",
+      "aspirational"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Show the product in use in a believable urban lifestyle moment without making the person overpower the product.",
+    "composition": "Cropped human context focusing on hand, wrist, feet or carried product; product occupies clear visual priority.",
+    "lighting": "Natural golden-hour or soft overcast light with cinematic contrast.",
+    "camera": "35-50mm lifestyle-commercial lens, candid but polished framing.",
+    "background": "Real urban setting with controlled background separation.",
+    "effects": "Subtle motion blur in environment only; product stays sharp.",
+    "copyZone": "Use wall/sky/pavement negative space for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FAS-003",
+    "title": "Floating Sneaker Energy",
+    "categories": [
+      "fashion"
+    ],
+    "productTypes": [
+      "shoe",
+      "sneaker"
+    ],
+    "objectives": [
+      "launch",
+      "conversion"
+    ],
+    "visualConcept": "Floating footwear energy burst",
+    "styleTags": [
+      "dynamic",
+      "sport",
+      "commercial"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.4,
+    "sceneDirection": "Suspend the shoe in an energetic athletic pose emphasizing sole, silhouette and material while keeping shape exact.",
+    "composition": "Three-quarter side angle with diagonal motion path; optional secondary shadow/reflection only.",
+    "lighting": "Hard rim flash plus directional key, frozen-motion clarity.",
+    "camera": "50-70mm product lens with dynamic perspective but no shape warping.",
+    "background": "Bold gradient or minimal sport set.",
+    "effects": "Dust, fabric fibers or speed streaks used sparingly behind the shoe.",
+    "copyZone": "Reserve upper corner for model name and CTA.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "FAS-004",
+    "title": "Material Craft Macro",
+    "categories": [
+      "fashion"
+    ],
+    "productTypes": [
+      "bag",
+      "shoe",
+      "watch",
+      "leather goods"
+    ],
+    "objectives": [
+      "trust",
+      "premium positioning"
+    ],
+    "visualConcept": "Craftsmanship macro detail",
+    "styleTags": [
+      "macro",
+      "craft",
+      "luxury"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Highlight stitching, grain, metal finishing, sole texture or construction detail to communicate craftsmanship.",
+    "composition": "Extreme close-up with enough product context to identify the item.",
+    "lighting": "Raking directional light revealing material texture and edge finishing.",
+    "camera": "100mm macro lens aesthetic, precise focus and premium micro-contrast.",
+    "background": "Dark neutral or workshop-inspired controlled backdrop.",
+    "effects": "No decorative effects; material itself is the hero.",
+    "copyZone": "Reserve one quiet band for craftsmanship statement.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "TEC-001",
+    "title": "Dark Neon Tech Hero",
+    "categories": [
+      "tech"
+    ],
+    "productTypes": [
+      "headset",
+      "mouse",
+      "keyboard",
+      "gadget",
+      "electronics"
+    ],
+    "objectives": [
+      "launch",
+      "brand awareness"
+    ],
+    "visualConcept": "Dark futuristic tech hero",
+    "styleTags": [
+      "tech",
+      "dark",
+      "neon"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Present the product as a premium modern technology object with controlled luminous accents, not a chaotic gaming cliché.",
+    "composition": "Hero at three-quarter angle on dark platform, clean silhouette, one dominant diagonal or vertical light motif.",
+    "lighting": "Dark studio key with cyan/magenta or brand-color rim accents, readable product surface.",
+    "camera": "50-85mm tech-commercial lens, crisp edges and realistic materials.",
+    "background": "Deep charcoal set with restrained illuminated panels or gradients.",
+    "effects": "Subtle light trails/reflections; no excessive holograms.",
+    "copyZone": "Reserve dark negative space for product name and one feature.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "TEC-002",
+    "title": "Exploded Feature View",
+    "categories": [
+      "tech"
+    ],
+    "productTypes": [
+      "gadget",
+      "electronics",
+      "headset",
+      "mouse",
+      "keyboard"
+    ],
+    "objectives": [
+      "consideration",
+      "feature communication"
+    ],
+    "visualConcept": "Exploded technical composition",
+    "styleTags": [
+      "technical",
+      "premium",
+      "informative"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Create a stylized exploded view that separates only plausible major components while preserving the recognizable exterior product.",
+    "composition": "Main product body centered with components aligned on one axis and clear spacing.",
+    "lighting": "Neutral precise studio light with edge definition and subtle rim.",
+    "camera": "70-100mm low-distortion technical product rendering look.",
+    "background": "Clean dark gray or light neutral technical set.",
+    "effects": "Fine connector lines/placeholders may indicate relationships; no fake specifications.",
+    "copyZone": "Reserve side column for verified feature labels.",
+    "avoid": [
+      "invented internal components presented as factual",
+      "fake specs",
+      "overly sci-fi holograms"
+    ]
+  },
+  {
+    "id": "TEC-003",
+    "title": "Clean White Innovation",
+    "categories": [
+      "tech"
+    ],
+    "productTypes": [
+      "gadget",
+      "electronics",
+      "home device"
+    ],
+    "objectives": [
+      "conversion",
+      "premium positioning"
+    ],
+    "visualConcept": "Clean bright innovation hero",
+    "styleTags": [
+      "clean",
+      "modern",
+      "minimal"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.3,
+    "sceneDirection": "Build a bright modern product ad with soft geometry and calm premium technology cues.",
+    "composition": "Centered or offset hero with layered white/neutral shapes and precise alignment.",
+    "lighting": "High-key soft studio illumination with subtle rim and realistic contact shadow.",
+    "camera": "70-100mm clean catalog-commercial lens.",
+    "background": "Warm white, soft gray or very pale brand-color architectural set.",
+    "effects": "Minimal reflections and soft shadow gradients.",
+    "copyZone": "Reserve large clean copy zone for product name and one benefit.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "TEC-004",
+    "title": "Desk Ecosystem Lifestyle",
+    "categories": [
+      "tech"
+    ],
+    "productTypes": [
+      "mouse",
+      "keyboard",
+      "headset",
+      "monitor accessory"
+    ],
+    "objectives": [
+      "consideration",
+      "lifestyle"
+    ],
+    "visualConcept": "Premium desk setup with product focus",
+    "styleTags": [
+      "lifestyle",
+      "workspace",
+      "modern"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Place the product in a realistic aspirational desk setup that demonstrates use without becoming a generic RGB-room scene.",
+    "composition": "Product foreground in focus; desk context recedes naturally with a clear visual path.",
+    "lighting": "Soft motivated window/practical lighting, controlled monitor glow.",
+    "camera": "35-50mm lifestyle product lens, product tack sharp with contextual depth.",
+    "background": "Clean contemporary desk, limited supporting devices and cable clutter.",
+    "effects": "Subtle screen glow/bokeh; no fake interface text.",
+    "copyZone": "Use wall/monitor-negative-space for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "TEC-005",
+    "title": "Performance Motion Lines",
+    "categories": [
+      "tech"
+    ],
+    "productTypes": [
+      "mouse",
+      "gaming accessory",
+      "headset",
+      "portable device"
+    ],
+    "objectives": [
+      "conversion",
+      "performance"
+    ],
+    "visualConcept": "Speed and precision energy",
+    "styleTags": [
+      "dynamic",
+      "performance",
+      "tech"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Communicate speed, responsiveness or precision through disciplined motion geometry around a stable sharp product.",
+    "composition": "Hero in foreground with directional light/motion lines flowing behind it, not across logo/details.",
+    "lighting": "Punchy flash-like key plus narrow rim accents.",
+    "camera": "50-70mm dynamic commercial lens, frozen product, controlled environmental blur.",
+    "background": "Dark-to-brand gradient set.",
+    "effects": "Thin speed trails, particles or vector-like streaks used as abstract motion cues only.",
+    "copyZone": "Reserve opposite side from motion direction for copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "HOM-001",
+    "title": "Warm Interior Product Context",
+    "categories": [
+      "home"
+    ],
+    "productTypes": [
+      "furniture",
+      "home decor",
+      "appliance",
+      "lighting"
+    ],
+    "objectives": [
+      "consideration",
+      "lifestyle"
+    ],
+    "visualConcept": "Warm premium interior context",
+    "styleTags": [
+      "interior",
+      "warm",
+      "lifestyle"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Show the product naturally integrated into a refined lived-in interior while keeping it unmistakably the hero.",
+    "composition": "Product on rule-of-thirds with layered foreground/background depth and uncluttered styling.",
+    "lighting": "Soft daylight from a believable window direction plus warm practical fill.",
+    "camera": "35-50mm interior-commercial lens with corrected verticals.",
+    "background": "Contemporary interior in neutral materials with only relevant supporting props.",
+    "effects": "No artificial sparkles; realistic shadows and reflections.",
+    "copyZone": "Reserve wall/empty furnishing zone for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "HOM-002",
+    "title": "Material Detail Interior",
+    "categories": [
+      "home"
+    ],
+    "productTypes": [
+      "furniture",
+      "surface material",
+      "home decor"
+    ],
+    "objectives": [
+      "premium positioning",
+      "trust"
+    ],
+    "visualConcept": "Interior material craftsmanship detail",
+    "styleTags": [
+      "macro",
+      "interior",
+      "craft"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.9,
+    "sceneDirection": "Focus on joinery, fabric, wood grain, stone, metal or finish detail while retaining recognizable product context.",
+    "composition": "Close-up detail in foreground with partial full-product silhouette/context behind.",
+    "lighting": "Soft raking daylight that reveals tactile material quality.",
+    "camera": "70-100mm detail lens, high texture fidelity.",
+    "background": "Real interior context kept softly out of focus.",
+    "effects": "No effects; material realism and light carry the image.",
+    "copyZone": "Small clean area for material/quality statement.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "PRO-001",
+    "title": "Architectural Dusk Hero",
+    "categories": [
+      "property"
+    ],
+    "productTypes": [
+      "house",
+      "residential property",
+      "villa"
+    ],
+    "objectives": [
+      "lead generation",
+      "premium positioning"
+    ],
+    "visualConcept": "Blue-hour architectural hero",
+    "styleTags": [
+      "architecture",
+      "cinematic",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "16:9",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.5,
+    "sceneDirection": "Present the property at blue hour with warm interior glow, believable landscaping and premium real-estate advertising polish.",
+    "composition": "Strong three-quarter facade angle, corrected verticals, foreground landscaping leading toward the entrance.",
+    "lighting": "Natural dusk ambient light balanced with warm interior/practical illumination.",
+    "camera": "24-35mm architectural lens, perspective corrected, realistic scale.",
+    "background": "Clean sky and landscaped surroundings; avoid impossible resort scenery.",
+    "effects": "Subtle interior glow and realistic reflections; no fantasy light beams.",
+    "copyZone": "Reserve sky or clean facade-adjacent space for project name and offer.",
+    "avoid": [
+      "fake extra floors",
+      "altered house geometry if reference supplied",
+      "impossible landscaping"
+    ]
+  },
+  {
+    "id": "PRO-002",
+    "title": "Bright Family Home Lifestyle",
+    "categories": [
+      "property"
+    ],
+    "productTypes": [
+      "house",
+      "residential property"
+    ],
+    "objectives": [
+      "lead generation",
+      "consideration"
+    ],
+    "visualConcept": "Bright aspirational family-home scene",
+    "styleTags": [
+      "property",
+      "lifestyle",
+      "warm"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "16:9"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Show the home as welcoming and livable with restrained human presence that supports scale and emotion.",
+    "composition": "Facade or living area remains primary; people are secondary and naturally placed.",
+    "lighting": "Soft morning or late-afternoon daylight with warm realistic interior tones.",
+    "camera": "28-35mm real-estate commercial lens, corrected lines and natural perspective.",
+    "background": "Realistic residential environment, tidy but not sterile.",
+    "effects": "Gentle foliage movement or sun flare only if naturally motivated.",
+    "copyZone": "Reserve sky/wall negative space for location, price or CTA.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "PRO-003",
+    "title": "Location Convenience Graphic",
+    "categories": [
+      "property"
+    ],
+    "productTypes": [
+      "house",
+      "residential property",
+      "land"
+    ],
+    "objectives": [
+      "lead generation",
+      "consideration"
+    ],
+    "visualConcept": "Property hero with clean location-benefit layout",
+    "styleTags": [
+      "property",
+      "informative",
+      "clean"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.9,
+    "sceneDirection": "Create a premium real-estate ad layout centered on the property image with structured space for nearby-location benefits.",
+    "composition": "Large architectural hero image taking 60-70% of frame, clean side or bottom information panel.",
+    "lighting": "Natural architectural lighting; information panel remains flat and readable.",
+    "camera": "Real-estate photography character with corrected verticals.",
+    "background": "Clean brand-color paneling and minimal map-inspired abstract lines, not a fake map.",
+    "effects": "Simple icon placeholders and separators; no invented distances.",
+    "copyZone": "Reserve 3-5 clearly aligned benefit rows plus CTA.",
+    "avoid": [
+      "invented travel times",
+      "fake map pins",
+      "tiny unreadable text"
+    ]
+  },
+  {
+    "id": "PRO-004",
+    "title": "Site Aerial Masterplan Mood",
+    "categories": [
+      "property"
+    ],
+    "productTypes": [
+      "housing development",
+      "land",
+      "residential property"
+    ],
+    "objectives": [
+      "brand awareness",
+      "lead generation"
+    ],
+    "visualConcept": "Aerial development overview",
+    "styleTags": [
+      "aerial",
+      "property",
+      "informative"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "16:9",
+      "4:5"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.8,
+    "sceneDirection": "Show an elevated/aerial overview that communicates layout, greenery and access while remaining visually realistic.",
+    "composition": "Development occupies central frame with roads and context readable; avoid extreme satellite altitude.",
+    "lighting": "Soft late-afternoon sun with long but realistic shadows.",
+    "camera": "Drone-style 24-35mm equivalent, corrected perspective and realistic scale.",
+    "background": "Actual or plausible surrounding neighborhood context matching the supplied reference.",
+    "effects": "Subtle boundary highlight only if requested; no fake future buildings.",
+    "copyZone": "Reserve sky/corner panel for project identity and CTA.",
+    "avoid": [
+      "invented roads",
+      "fake amenities",
+      "unrealistic empty surroundings"
+    ]
+  },
+  {
+    "id": "AUT-001",
+    "title": "Automotive Accessory Garage Hero",
+    "categories": [
+      "automotive"
+    ],
+    "productTypes": [
+      "car accessory",
+      "detailing product",
+      "motorcycle accessory"
+    ],
+    "objectives": [
+      "conversion",
+      "premium positioning"
+    ],
+    "visualConcept": "Premium garage product hero",
+    "styleTags": [
+      "automotive",
+      "dark",
+      "industrial"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Stage the product in a clean premium garage/detailing environment with automotive material cues and strong hero clarity.",
+    "composition": "Product foreground on workbench/pedestal; vehicle context remains secondary and softly separated.",
+    "lighting": "Directional strip-light reflections and controlled cool/warm garage practicals.",
+    "camera": "50-85mm commercial product lens.",
+    "background": "Dark concrete, brushed metal and subtle vehicle body reflections.",
+    "effects": "Fine mist/reflection only when relevant; no excessive smoke.",
+    "copyZone": "Reserve dark side region for product name and benefit.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "AUT-002",
+    "title": "Detailing Gloss Result",
+    "categories": [
+      "automotive"
+    ],
+    "productTypes": [
+      "car care",
+      "polish",
+      "cleaner",
+      "detailing product"
+    ],
+    "objectives": [
+      "conversion",
+      "benefit communication"
+    ],
+    "visualConcept": "Gloss and surface-result closeup",
+    "styleTags": [
+      "automotive",
+      "macro",
+      "premium"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Pair the exact detailing product with a close, believable glossy vehicle surface that visually communicates the intended finish.",
+    "composition": "Product in foreground, curved body panel reflection behind; no deceptive before/after unless supplied.",
+    "lighting": "Long strip lights revealing smooth reflections and surface quality.",
+    "camera": "70-100mm commercial detail lens.",
+    "background": "Controlled studio/garage background.",
+    "effects": "Water beading or gloss only when relevant to the real product benefit.",
+    "copyZone": "Reserve upper dark region for concise benefit copy.",
+    "avoid": [
+      "fake scratches disappearing",
+      "unverified restoration claims",
+      "license plates with random text"
+    ]
+  },
+  {
+    "id": "GEN-009",
+    "title": "Shadow Geometry Poster",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "beauty",
+      "fashion accessory",
+      "tech accessory"
+    ],
+    "objectives": [
+      "brand awareness",
+      "social engagement"
+    ],
+    "visualConcept": "Graphic shadow geometry",
+    "styleTags": [
+      "graphic",
+      "minimal",
+      "poster"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Use strong architectural shadows and a clean hero product to create a poster-like premium composition.",
+    "composition": "Hero placed at a rule-of-thirds point, shadow becomes secondary graphic element.",
+    "lighting": "Hard directional light through a geometric gobo with controlled fill.",
+    "camera": "70-85mm commercial lens, crisp contours.",
+    "background": "Matte seamless set in neutral or brand color.",
+    "effects": "No particles; shadow shape provides the visual drama.",
+    "copyZone": "Reserve the brightest clean area for headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-010",
+    "title": "Mirror Reflection Luxury",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "perfume",
+      "bottle",
+      "watch",
+      "tech accessory",
+      "premium product"
+    ],
+    "objectives": [
+      "premium positioning",
+      "launch"
+    ],
+    "visualConcept": "Controlled mirror-reflection hero",
+    "styleTags": [
+      "luxury",
+      "reflective",
+      "studio"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.2,
+    "sceneDirection": "Create a polished reflective set where one clean mirror image amplifies the product silhouette without visual confusion.",
+    "composition": "Hero vertical or three-quarter with single controlled reflection beneath/behind.",
+    "lighting": "Strip-light edges, soft key and carefully shaped highlights.",
+    "camera": "85mm product lens, high micro-contrast.",
+    "background": "Smoked mirror, glass or polished metal with minimal backdrop.",
+    "effects": "One reflection only, no kaleidoscope duplication.",
+    "copyZone": "Reserve dark or clean side space for premium copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-011",
+    "title": "Color Block Pop",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "snack",
+      "drink",
+      "cosmetic",
+      "youth product"
+    ],
+    "objectives": [
+      "social engagement",
+      "conversion"
+    ],
+    "visualConcept": "Bold color-block social ad",
+    "styleTags": [
+      "bold",
+      "youthful",
+      "graphic"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.9,
+    "sceneDirection": "Create an energetic social-first ad using 2-3 coordinated color blocks while preserving premium product realism.",
+    "composition": "Large hero product with graphic blocks and one supporting prop/ingredient cluster.",
+    "lighting": "Bright crisp studio light with saturated but controlled color bounce.",
+    "camera": "50-70mm commercial lens, thumbnail-readable silhouette.",
+    "background": "Clean geometric color-block background matched to packaging.",
+    "effects": "Minimal graphic shapes, no random stickers unless supplied by brand.",
+    "copyZone": "Reserve one high-contrast block for short headline/CTA.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-012",
+    "title": "Unboxing Anticipation",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "gift box",
+      "electronics",
+      "beauty",
+      "food gift"
+    ],
+    "objectives": [
+      "consideration",
+      "launch"
+    ],
+    "visualConcept": "Premium unboxing anticipation",
+    "styleTags": [
+      "unboxing",
+      "premium",
+      "tactile"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Show the product emerging from or arranged with its packaging in a refined unboxing moment focused on tactile anticipation.",
+    "composition": "Open box creates frame around hero; interior components aligned neatly and realistically.",
+    "lighting": "Soft overhead key with warm side accent and believable box shadows.",
+    "camera": "50-70mm tabletop-commercial lens.",
+    "background": "Neutral tabletop or brand-color set.",
+    "effects": "Tissue paper/ribbon only if appropriate; no floating chaos.",
+    "copyZone": "Reserve lid/interior negative-space area for small message.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-013",
+    "title": "Scale & Precision Grid",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "tech accessory",
+      "home product",
+      "tool",
+      "consumer goods"
+    ],
+    "objectives": [
+      "consideration",
+      "trust"
+    ],
+    "visualConcept": "Precision product grid",
+    "styleTags": [
+      "precise",
+      "informative",
+      "minimal"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.8,
+    "sceneDirection": "Present the product with disciplined engineering-like spacing and visual cues of precision without inventing measurements.",
+    "composition": "Hero centered on subtle modular grid, optional side/detail crop panel.",
+    "lighting": "Neutral soft key with crisp edge light.",
+    "camera": "85-100mm low-distortion product lens.",
+    "background": "Light gray or charcoal technical set with faint grid.",
+    "effects": "Minimal linework and alignment marks as design motifs only.",
+    "copyZone": "Reserve side panel for verified dimensions/features.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-014",
+    "title": "Natural Window Still Life",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "home product",
+      "food",
+      "beauty",
+      "craft product"
+    ],
+    "objectives": [
+      "brand awareness",
+      "trust"
+    ],
+    "visualConcept": "Natural window-light still life",
+    "styleTags": [
+      "natural",
+      "warm",
+      "authentic"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.1,
+    "sceneDirection": "Create a believable premium still life that feels photographed near a real window rather than generated in a synthetic studio.",
+    "composition": "Relaxed asymmetrical arrangement with hero clearly dominant and only relevant props.",
+    "lighting": "Soft directional window light with natural shadow falloff and gentle bounce.",
+    "camera": "50-85mm editorial-commercial lens, realistic depth.",
+    "background": "Tactile real-world surface with restrained contextual background.",
+    "effects": "No artificial particles; natural texture is enough.",
+    "copyZone": "Reserve wall/table negative-space for understated headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-015",
+    "title": "Seasonal Celebration Premium",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "gift product",
+      "food",
+      "beauty",
+      "consumer goods"
+    ],
+    "objectives": [
+      "seasonal",
+      "conversion"
+    ],
+    "visualConcept": "Premium seasonal celebration",
+    "styleTags": [
+      "seasonal",
+      "premium",
+      "festive"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Adapt the product into a tasteful seasonal campaign with culturally appropriate cues and restrained celebration.",
+    "composition": "Hero product central with small framing accents rather than dense decoration.",
+    "lighting": "Warm flattering commercial light with subtle practical glow.",
+    "camera": "70-85mm product lens.",
+    "background": "Elegant seasonal set using brand-compatible materials and colors.",
+    "effects": "Controlled bokeh, ribbon, foliage or lights; avoid cheap glitter overload.",
+    "copyZone": "Reserve upper area for greeting/offer.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-016",
+    "title": "Hands-in-Frame Product Use",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "bottle",
+      "food",
+      "beauty",
+      "gadget",
+      "home product"
+    ],
+    "objectives": [
+      "consideration",
+      "social engagement"
+    ],
+    "visualConcept": "Human-touch product moment",
+    "styleTags": [
+      "human",
+      "lifestyle",
+      "authentic"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Use one or two natural hands to interact with the product, making scale and use immediately understandable while keeping branding readable.",
+    "composition": "Hands enter from edge; product remains central and unobstructed; no full face needed.",
+    "lighting": "Soft natural or studio-lifestyle light with realistic skin tones.",
+    "camera": "50-70mm lifestyle-commercial lens, shallow contextual depth.",
+    "background": "Simple believable use environment.",
+    "effects": "No decorative effects; human gesture supplies energy.",
+    "copyZone": "Reserve background negative space for headline.",
+    "avoid": [
+      "extra fingers",
+      "distorted hands",
+      "logo covered by grip"
+    ]
+  },
+  {
+    "id": "GEN-017",
+    "title": "Three-Panel Story",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "consumer goods",
+      "beauty",
+      "food",
+      "tech accessory"
+    ],
+    "objectives": [
+      "consideration",
+      "feature communication"
+    ],
+    "visualConcept": "Three-panel visual story",
+    "styleTags": [
+      "editorial",
+      "informative",
+      "social"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 8.9,
+    "sceneDirection": "Create a coherent three-panel ad system: hero packshot, detail/texture, and use/context, all with consistent art direction.",
+    "composition": "Three aligned panels with one dominant hero and two supporting crops; strong grid and consistent margins.",
+    "lighting": "Consistent lighting language across panels.",
+    "camera": "Commercial product/detail lens character matched across images.",
+    "background": "Unified brand-color or neutral background system.",
+    "effects": "Effects kept consistent and minimal.",
+    "copyZone": "Reserve one panel edge or footer for concise copy.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  },
+  {
+    "id": "GEN-018",
+    "title": "Bold Oversized Crop",
+    "categories": [
+      "general"
+    ],
+    "productTypes": [
+      "packaged product",
+      "beauty",
+      "food",
+      "fashion accessory"
+    ],
+    "objectives": [
+      "brand awareness",
+      "social engagement"
+    ],
+    "visualConcept": "Oversized product crop poster",
+    "styleTags": [
+      "bold",
+      "poster",
+      "editorial"
+    ],
+    "platforms": [
+      "Instagram",
+      "Facebook",
+      "Marketplace",
+      "Website"
+    ],
+    "aspectRatios": [
+      "4:5",
+      "1:1",
+      "9:16"
+    ],
+    "modelHints": [
+      "GPT Image",
+      "Nano Banana",
+      "Seedream",
+      "Flux"
+    ],
+    "qualityScore": 9.0,
+    "sceneDirection": "Use an intentionally oversized close crop of the product to create immediate scroll-stopping brand recognition.",
+    "composition": "Product extends beyond one or two frame edges while logo/recognition cues remain visible.",
+    "lighting": "Clean high-contrast studio light with controlled texture.",
+    "camera": "70-100mm lens character, no wide-angle warping.",
+    "background": "Simple flat or gradient background with strong brand contrast.",
+    "effects": "No extra props unless essential.",
+    "copyZone": "Reserve a deliberate small negative-space corner for short headline.",
+    "avoid": [
+      "cheap stock-photo look",
+      "excessive props",
+      "illegible micro-text"
+    ]
+  }
+]
