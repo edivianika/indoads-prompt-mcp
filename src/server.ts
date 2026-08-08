@@ -4,7 +4,15 @@ import express, { type NextFunction, type Request, type Response } from 'express
 import { createMcpHandler } from '@modelcontextprotocol/server';
 import { toNodeHandler } from '@modelcontextprotocol/node';
 import { buildMcpServer } from './mcp.js';
-import { composePrompt, getPrompt, listTaxonomy, searchPrompts } from './lib/engine.js';
+import {
+  composePrompt,
+  generateAdPrompt,
+  getPrompt,
+  listTaxonomy,
+  recommendPrompts,
+  searchPrompts,
+  toPublicPromptError,
+} from './lib/engine.js';
 
 const app = express();
 const port = Number(process.env.PORT || 3000);
@@ -15,13 +23,34 @@ function optionalBearer(req: Request, res: Response, next: NextFunction) {
   if (!expected) return next();
   const auth = req.header('authorization');
   if (auth !== `Bearer ${expected}`) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    return res.status(401).json({ code: 'UNAUTHORIZED', error: 'Unauthorized' });
   }
   next();
 }
 
+function errorStatus(error: unknown) {
+  const payload = toPublicPromptError(error);
+  if (payload.code === 'PROMPT_NOT_FOUND') return 404;
+  if (payload.code === 'DATA_UNAVAILABLE') return 503;
+  if (payload.code === 'UNEXPECTED_ERROR') return 500;
+  return 400;
+}
+
+function sendPromptError(res: Response, error: unknown) {
+  return res.status(errorStatus(error)).json(toPublicPromptError(error));
+}
+
 app.get('/health', (_req, res) => {
-  res.json({ ok: true, service: 'indoads-prompt-mcp', version: '0.1.0', prompts: listTaxonomy().promptCount });
+  try {
+    res.json({ ok: true, service: 'indoads-prompt-mcp', version: '0.3.0', prompts: listTaxonomy().promptCount });
+  } catch (error) {
+    res.status(503).json({
+      ok: false,
+      service: 'indoads-prompt-mcp',
+      version: '0.3.0',
+      ...toPublicPromptError(error),
+    });
+  }
 });
 
 app.get('/privacy', (_req, res) => {
@@ -32,37 +61,58 @@ app.get('/privacy', (_req, res) => {
 
 app.get('/openapi.yaml', (_req, res) => {
   const text = readFileSync(resolve(process.cwd(), 'openapi.yaml'), 'utf8');
-  res.type('application/yaml').send(text.replaceAll('https://YOUR_DOMAIN', process.env.PUBLIC_BASE_URL || 'http://localhost:3000'));
+  res
+    .type('application/yaml')
+    .send(text.replaceAll('https://YOUR_DOMAIN', process.env.PUBLIC_BASE_URL || 'http://localhost:3000'));
 });
 
-app.get('/api/taxonomy', optionalBearer, (_req, res) => res.json(listTaxonomy()));
+app.get('/api/taxonomy', optionalBearer, (_req, res) => {
+  try {
+    return res.json(listTaxonomy());
+  } catch (error) {
+    return sendPromptError(res, error);
+  }
+});
 
 app.post('/api/search', optionalBearer, (req, res) => {
-  res.json(searchPrompts(req.body ?? {}));
+  try {
+    return res.json(searchPrompts(req.body ?? {}));
+  } catch (error) {
+    return sendPromptError(res, error);
+  }
 });
 
 app.post('/api/recommend', optionalBearer, (req, res) => {
-  const { productDescription, ...input } = req.body ?? {};
-  res.json(
-    searchPrompts({
-      ...input,
-      query: [input.query, productDescription].filter(Boolean).join(' '),
-      diversify: input.diversify ?? true,
-    }),
-  );
+  try {
+    return res.json(recommendPrompts(req.body ?? {}));
+  } catch (error) {
+    return sendPromptError(res, error);
+  }
+});
+
+app.post('/api/generate', optionalBearer, (req, res) => {
+  try {
+    return res.json(generateAdPrompt(req.body ?? {}));
+  } catch (error) {
+    return sendPromptError(res, error);
+  }
 });
 
 app.get('/api/prompts/:id', optionalBearer, (req, res) => {
-  const prompt = getPrompt(String(req.params.id));
-  if (!prompt) return res.status(404).json({ error: 'Prompt not found' });
-  return res.json(prompt);
+  try {
+    const prompt = getPrompt(String(req.params.id));
+    if (!prompt) return res.status(404).json({ code: 'PROMPT_NOT_FOUND', error: 'Prompt not found' });
+    return res.json(prompt);
+  } catch (error) {
+    return sendPromptError(res, error);
+  }
 });
 
 app.post('/api/compose', optionalBearer, (req, res) => {
   try {
     return res.json(composePrompt(req.body));
   } catch (error) {
-    return res.status(400).json({ error: error instanceof Error ? error.message : String(error) });
+    return sendPromptError(res, error);
   }
 });
 
@@ -72,8 +122,18 @@ app.all('/mcp', optionalBearer, (req, res) => void nodeMcpHandler(req, res, req.
 app.get('/', (_req, res) => {
   res.json({
     name: 'IndoAds Prompt MCP',
-    purpose: 'Retrieve and compose high-quality advertising prompts. No image generation.',
-    endpoints: ['/mcp', '/api/search', '/api/recommend', '/api/compose', '/api/taxonomy', '/openapi.yaml'],
+    purpose: 'Retrieve, select and compose high-quality advertising prompts. No image generation.',
+    preferredDirectWorkflow: '/api/generate or MCP tool generateAdPrompt',
+    endpoints: [
+      '/mcp',
+      '/api/generate',
+      '/api/search',
+      '/api/recommend',
+      '/api/compose',
+      '/api/taxonomy',
+      '/openapi.yaml',
+      '/privacy',
+    ],
   });
 });
 
