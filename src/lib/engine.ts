@@ -260,12 +260,18 @@ export function composePrompt(input: ComposeInput) {
   const copyBlock = input.copyText?.trim()
     ? `AD COPY: Render only this supplied copy when text is appropriate: “${input.copyText.trim()}”. Keep spelling exact, hierarchy clean and typography secondary to the product.`
     : `AD COPY: Do not invent promotional claims. Reserve the copy area for later layout unless a minimal brand-safe headline is explicitly requested.`;
+  const mediaType = input.mediaType ?? 'image';
+  const duration = Math.max(5, Math.min(input.duration ?? 10, 15));
+  const motionBlock = mediaType === 'motion'
+    ? `MOTION DIRECTION: Create a ${duration}-second premium advertising video. Preserve exact product identity across every frame. Use smooth motivated camera movement, physically plausible product action, continuous lighting and reflections, a clear opening hook, one benefit-focused middle action, and a stable hero packshot with the supplied copy at the end. No morphing, teleportation, duplicate products, warped labels or random text.`
+    : '';
 
   const prompt = [
     `Create a premium commercial advertising image for ${input.productName}${input.brandName ? ` by ${input.brandName}` : ''}.`,
     input.productDescription ? `PRODUCT DESCRIPTION: ${input.productDescription}` : '',
     input.keyBenefit ? `KEY BENEFIT TO COMMUNICATE VISUALLY: ${input.keyBenefit}` : '',
     input.targetAudience ? `TARGET AUDIENCE: ${input.targetAudience}` : '',
+    `PRODUCT UNDERSTANDING: ${describeProduct(analyzeProduct(input.productDescription, input.keyBenefit, input.targetAudience, input.extraInstructions), input.keyBenefit, input.targetAudience)}`,
     referenceLock,
     `CONCEPT: ${p.visualConcept}. ${p.sceneDirection}`,
     `COMPOSITION: ${p.composition}`,
@@ -275,6 +281,7 @@ export function composePrompt(input: ComposeInput) {
     `VISUAL EFFECTS: ${p.effects}`,
     `LAYOUT / COPY ZONE: ${p.copyZone}`,
     copyBlock,
+    motionBlock,
     `FORMAT: ${ratio}. Design specifically for ${platform}. Keep the hero product immediately readable at thumbnail size.`,
     `QUALITY BAR: polished agency-level commercial art direction, coherent shadows and reflections, realistic materials, controlled depth, premium color separation, no generic AI-slop styling.`,
     `AVOID: ${p.avoid.join('; ')}; distorted packaging; duplicate products unless requested; warped logos; random text; clutter; muddy lighting; overprocessed HDR; fake UI elements; watermarks.`,
@@ -291,7 +298,23 @@ export function composePrompt(input: ComposeInput) {
     aspectRatio: ratio,
     platform,
     prompt,
+    mediaType,
+    ...(mediaType === 'motion' ? { duration } : {}),
   };
+}
+
+function analyzeProduct(description?: string, benefit?: string, audience?: string, extra?: string) {
+  const text = norm([description, benefit, audience, extra].filter(Boolean).join(' '));
+  return {
+    packageType: /pouch|sachet|packet/.test(text) ? 'flexible pouch or sachet' : /dropper|vial/.test(text) ? 'precision dropper or vial' : /jar|cream/.test(text) ? 'wide-mouth jar' : /bottle|serum|drink|sambal/.test(text) ? 'hero bottle' : /can|tin/.test(text) ? 'metal can or tin' : 'the exact package form described by the user',
+    material: /glass|bottle|jar|dropper|vial/.test(text) ? 'rigid glass with believable weight and controlled highlights' : /metal|aluminium|aluminum|tin|can/.test(text) ? 'physically correct metal with controlled reflections' : /pouch|sachet|packet|bag/.test(text) ? 'flexible packaging with realistic folds and seams' : 'the real-world material described by the user',
+    useContext: /food|snack|meal|sambal|spicy|beverage|coffee|juice/.test(text) ? 'a believable serving or consumption moment' : /skin|beauty|cosmetic|face|hair/.test(text) ? 'a refined beauty or self-care moment' : /tech|headset|keyboard|mouse|phone|laptop/.test(text) ? 'a purposeful lifestyle or functional use moment' : 'a believable moment of use inferred from the product description',
+    visualMood: /premium|luxury|elegant/.test(text) ? 'restrained, premium and tactile' : /organic|natural|herbal|eco/.test(text) ? 'natural, honest and warm' : /spicy|bold|energy|sport/.test(text) ? 'dynamic, high-contrast and energetic' : 'clear, commercially appealing and product-led',
+  };
+}
+
+function describeProduct(analysis: ReturnType<typeof analyzeProduct>, benefit?: string, audience?: string) {
+  return [`Package: ${analysis.packageType}. Material: ${analysis.material}. Use context: ${analysis.useContext}. Visual mood: ${analysis.visualMood}.`, benefit ? `Make this benefit visually understandable without inventing unsupported claims: ${benefit.trim()}.` : 'Do not invent unsupported product claims.', audience ? `Tune styling and emotional tone to this audience: ${audience.trim()}.` : ''].filter(Boolean).join(' ');
 }
 
 function hasGenerateContext(input: GenerateAdPromptInput) {
@@ -356,7 +379,11 @@ export function generateAdPrompt(input: GenerateAdPromptInput = {}): GenerateAdP
     aspectRatio: input.aspectRatio,
     hasReferenceImage: input.hasReferenceImage,
     extraInstructions: input.extraInstructions,
+    mediaType: input.mediaType,
+    duration: input.duration,
+    videoModel: input.videoModel,
   });
+  const analysis = analyzeProduct(input.productDescription, input.keyBenefit, input.targetAudience, input.extraInstructions);
 
   return {
     prompt: composed.prompt,
@@ -373,5 +400,15 @@ export function generateAdPrompt(input: GenerateAdPromptInput = {}): GenerateAdP
     aspectRatio: composed.aspectRatio,
     platform: composed.platform,
     recommendedModels: composed.recommendedModels,
+    mediaType: composed.mediaType,
+    ...(composed.mediaType === 'motion' ? {
+      duration: composed.duration,
+      storyboard: [
+        { time: '0–2s', shot: 'Immediate visual hook: reveal the product and establish the setting with a purposeful camera move.', audio: 'Subtle opening impact and ambience.' },
+        { time: `${Math.max(2, Math.round((composed.duration ?? 10) * 0.2))}–${Math.max(4, Math.round((composed.duration ?? 10) * 0.6))}s`, shot: 'Show the product in use or visualize its primary benefit with one clear, physically plausible action.', audio: 'Product-use sound and restrained musical lift.' },
+        { time: `${Math.max(4, Math.round((composed.duration ?? 10) * 0.6))}–${composed.duration ?? 10}s`, shot: 'Resolve into a stable hero packshot, logo facing camera, with supplied copy and a CTA-safe area.', audio: 'Clean branded resolve and soft CTA accent.' },
+      ],
+    } : {}),
+    productAnalysis: analysis,
   };
 }

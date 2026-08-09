@@ -71,6 +71,9 @@ export interface ComposeInput {
   aspectRatio?: string;
   hasReferenceImage?: boolean;
   extraInstructions?: string;
+  mediaType?: 'image' | 'motion';
+  duration?: number;
+  videoModel?: string;
 }
 
 export interface GenerateAdPromptInput {
@@ -89,6 +92,9 @@ export interface GenerateAdPromptInput {
   copyText?: string;
   hasReferenceImage?: boolean;
   extraInstructions?: string;
+  mediaType?: 'image' | 'motion';
+  duration?: number;
+  videoModel?: string;
 }
 
 export interface GenerateAdPromptResult {
@@ -106,4 +112,8 @@ export interface GenerateAdPromptResult {
   aspectRatio: string;
   platform: string;
   recommendedModels: string[];
+  mediaType: 'image' | 'motion';
+  duration?: number;
+  storyboard?: Array<{ time: string; shot: string; audio?: string }>;
+  productAnalysis?: { packageType: string; material: string; useContext: string; visualMood: string };
 }

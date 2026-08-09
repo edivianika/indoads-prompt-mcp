@@ -83,6 +83,23 @@ test('generateAdPrompt works with partial input', () => {
   assert.equal(result.platform, 'Instagram');
 });
 
+test('motion generation includes product-aware direction and storyboard', () => {
+  const result = generateAdPrompt({
+    productName: 'Sambal Nusantara',
+    productDescription: 'premium sambal in a glass bottle with a red label',
+    keyBenefit: 'rich smoky heat',
+    mediaType: 'motion',
+    duration: 10,
+  });
+
+  assert.equal(result.mediaType, 'motion');
+  assert.equal(result.duration, 10);
+  assert.equal(result.storyboard?.length, 3);
+  assert.match(result.prompt, /MOTION DIRECTION/);
+  assert.match(result.prompt, /rigid glass/);
+  assert.match(result.prompt, /rich smoky heat/);
+});
+
 test('generateAdPrompt rejects an empty request with a public-safe error', () => {
   assert.throws(
     () => generateAdPrompt({}),
