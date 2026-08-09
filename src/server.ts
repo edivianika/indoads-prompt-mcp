@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import express, { type NextFunction, type Request, type Response } from 'express';
 import { createMcpHandler } from '@modelcontextprotocol/server';
 import { toNodeHandler } from '@modelcontextprotocol/node';
@@ -14,7 +14,7 @@ import {
   toPublicPromptError,
 } from './lib/engine.js';
 
-const app = express();
+export const app = express();
 const port = Number(process.env.PORT || 3000);
 app.use(express.json({ limit: '1mb' }));
 
@@ -60,10 +60,14 @@ app.get('/privacy', (_req, res) => {
 });
 
 app.get('/openapi.yaml', (_req, res) => {
-  const text = readFileSync(resolve(process.cwd(), 'openapi.yaml'), 'utf8');
-  res
-    .type('application/yaml')
-    .send(text.replaceAll('https://YOUR_DOMAIN', process.env.PUBLIC_BASE_URL || 'http://localhost:3000'));
+  try {
+    const text = readFileSync(fileURLToPath(new URL('../openapi.yaml', import.meta.url)), 'utf8');
+    return res
+      .type('application/yaml')
+      .send(text.replaceAll('https://YOUR_DOMAIN', process.env.PUBLIC_BASE_URL || 'http://localhost:3000'));
+  } catch {
+    return res.status(503).json({ code: 'OPENAPI_UNAVAILABLE', error: 'OpenAPI schema is unavailable.' });
+  }
 });
 
 app.get('/api/taxonomy', optionalBearer, (_req, res) => {
@@ -137,6 +141,16 @@ app.get('/', (_req, res) => {
   });
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`IndoAds Prompt MCP listening on :${port}`);
+app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+  if (error instanceof SyntaxError) {
+    return res.status(400).json({ code: 'INVALID_JSON', error: 'Request body must be valid JSON.' });
+  }
+  console.error('Unhandled request error:', error instanceof Error ? error.message : error);
+  return res.status(500).json({ code: 'INTERNAL_ERROR', error: 'Internal server error.' });
 });
+
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, '0.0.0.0', () => {
+    console.log(`IndoAds Prompt MCP listening on :${port}`);
+  });
+}

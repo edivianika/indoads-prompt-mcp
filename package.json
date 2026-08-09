@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node scripts/expand-prompts.mjs --runtime && tsx src/server.ts",
-    "build": "tsc && mkdir -p dist/data && cp src/data/prompts.json dist/data/prompts.json && node scripts/expand-prompts.mjs",
+    "build": "tsc && mkdir -p dist/data && cp src/data/prompts.json dist/data/prompts.json && cp openapi.yaml dist/openapi.yaml && node scripts/expand-prompts.mjs",
     "start:prod": "node dist/server.js",
     "test": "tsx --test tests/*.test.ts"
   },
